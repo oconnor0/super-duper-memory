@@ -1,0 +1,18 @@
+name: ABC
+on:
+  pull_request_target:
+    branches:
+      - master
+    types:
+      - opened
+
+jobs:
+  open-patch-request:
+    if:  startsWith(github.head_ref, 'master-')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comment with patch request.
+        uses: actions/github-script@v6
+        with:
+          script: |
+            console.log('oh, hai')
