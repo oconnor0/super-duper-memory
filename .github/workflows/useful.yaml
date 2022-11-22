@@ -17,7 +17,6 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: |
-            // console.log(github)
-            console.log(github.context.payload.pull_request.user.login)
-            console.log(github.context.payload) //.pull_request.user.login == 'oconnor0'
+            console.log(context.payload.pull_request.user.login)
+            console.log(context.payload) //.pull_request.user.login == 'oconnor0'
             console.log('oh, hai')
