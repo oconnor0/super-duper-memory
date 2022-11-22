@@ -10,7 +10,7 @@ jobs:
   open-patch-request:
     if: |
       startsWith(github.head_ref, 'master-')
-      && github.context.payload.pull_request.user.login == 'oconnor0'
+#&& github.context.payload.pull_request.user.login == 'oconnor0'
     runs-on: ubuntu-latest
     steps:
       - name: Comment with patch request.
