@@ -10,7 +10,7 @@ jobs:
   open-patch-request:
     if: |
       startsWith(github.head_ref, 'master-')
-      && github.actor == 'oconnor1'
+      && github.actor == 'oconnor0'
     runs-on: ubuntu-latest
     steps:
       - name: Comment with patch request.
