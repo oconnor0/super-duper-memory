@@ -20,3 +20,7 @@ jobs:
             console.log(context.payload.pull_request.user.login)
             console.log(context.payload) //.pull_request.user.login == 'oconnor0'
             console.log('oh, hai')
+      - name: Comment with special action.
+        uses: oconnor0/refactored-train@master
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
